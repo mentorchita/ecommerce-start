@@ -17,4 +17,3 @@ cd ecommerce-agent
 ```
 
 ### Part 2: Service Testing (45 min)
-... (detailed guide from earlier)
