@@ -1,5 +1,6 @@
 import json
 import random
+import os
 from faker import Faker
 import pandas as pd
 
@@ -82,7 +83,8 @@ def generate_interactions(num_users=50, num_interactions=200):
     return interactions
 
 # Головна функція для генерації всіх даних та збереження
-def generate_ecommerce_data(output_dir='ecommerce_data'):
+def generate_ecommerce_data(output_dir='data', num_products=150):
+    os.makedirs(output_dir, exist_ok=True)
     products = generate_products(100)
     reviews = generate_reviews(products, 5)
     queries = generate_user_queries(50)
@@ -107,3 +109,4 @@ def generate_ecommerce_data(output_dir='ecommerce_data'):
 # Виклик функції
 if __name__ == "__main__":
     generate_ecommerce_data()
+
