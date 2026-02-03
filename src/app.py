@@ -41,7 +41,7 @@ if prompt := st.chat_input("Запитайте про товари (наприк
     if not results.empty:
         response = f"Знайдено {len(results)} товарів:\n\n"
         for _, row in results.head(5).iterrows():
-            response += f"- **{row['name']}** ({row['category']}) - {row['final_price']} грн\n  {row['description'][:15>
+            response += f"- **{row['name']}** ({row['category']}) - ${row['final_price']}\n  {row['description'][:150]}...\n\n"
     else:
         response = "Нічого не знайдено. Спробуйте інший запит!"
 
