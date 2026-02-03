@@ -7,7 +7,34 @@ RAG-powered search, and LangChain agents.
 ```bash
 # One-command setup
 ./scripts/setup/init_project.sh
+```
+## Module 1: Setup
 
+1. Clone the repository:
+
+```bash
+git clone https://github.com/mentorchita/ecommerce-start.git
+cd ecommerce-start
+```
+3. Generate data:
+```bash
+python scripts/generate_data.py
+```
+
+5. Run locally (without Docker):
+```bash
+pip install -r requirements.txt
+streamlit run src/app.py
+```
+7. From Docker:
+
+```bash
+docker compose up --build
+```
+
+Open: http://localhost:8501
+
+```bash
 # Access services
 - ML Service: http://localhost:8001
 - RAG Service: http://localhost:8002
