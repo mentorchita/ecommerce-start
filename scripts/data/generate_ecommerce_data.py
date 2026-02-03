@@ -359,7 +359,7 @@ AGENT_RESPONSES = {
         "While we can't match that exact price, I can offer you {alternative}. Would that work for you?",
     ],
     "recommendation": [
-        "Based on your budget and needs, I'd recommend {product1} or {product2}. {Product1} is {comparison}.",
+        "Based on your budget and needs, I'd recommend {product1} or {product2}. {product1} is {comparison}.",
         "Perfect! I have some great options: {list}. My personal favorite is {favorite} because {reason}.",
         "Great choice for {occasion}! I suggest {product}. It's {price}, well-reviewed, and {special_feature}.",
     ]
@@ -1213,3 +1213,4 @@ if __name__ == "__main__":
         n_conversations=args.conversations,
         output_dir=args.output
     )
+
