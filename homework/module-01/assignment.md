@@ -13,7 +13,7 @@ Create `architecture.md` documenting:
 
 ### Task 2: Service Testing Script (30 min)
 Create `test_services.sh` that:
-- Tests all health endpoints
+- Tests  endpoints
 - Validates responses
 - Exits with proper error codes
 
