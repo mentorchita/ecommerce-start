@@ -14,9 +14,9 @@ RAG-powered search, and LangChain agents.
 ```bash
 ./scripts/setup/init_project.sh --quick
 ```
-### Setup info
+### Initial setup info
 
-[setup README](./scripts/setup/README.md)
+[Initial setup README](./scripts/setup/README.md)
 
 ## Module 1: Setup
 
