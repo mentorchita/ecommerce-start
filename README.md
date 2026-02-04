@@ -6,8 +6,18 @@ RAG-powered search, and LangChain agents.
 ## Quick Start
 ```bash
 # One-command setup
-./scripts/setup/init_project.sh
+./scripts/setup/init_project.sh --quick
 ```
+
+## Full Start
+
+```bash
+./scripts/setup/init_project.sh --quick
+```
+### Setup info
+
+[setup README](./scripts/setup/README.md)
+
 ## Module 1: Setup
 
 1. Clone the repository:
