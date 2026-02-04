@@ -1,7 +1,16 @@
+```bash
 ./scripts/setup/init_project.sh              # full setup
+```
+```bash
 ./scripts/setup/init_project.sh --quick      # quickly 
+```
+```bash
 ./scripts/setup/init_project.sh --skip-build # No Docker build
+```
+```bash
 ./scripts/setup/init_project.sh --skip-data  # No data generation
+```
+```bash
 ./scripts/setup/init_project.sh --help       # Help
 ```
 
