@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("E-commerce Chat Agent - Базова версія (Модуль 1)")
+st.title("E-commerce Chat Agent - Basic version (Modul 1)")
 
 @st.cache_data
 def load_products():
@@ -9,15 +9,15 @@ def load_products():
         # Рекомендую перевірити шлях до файлу
         return pd.read_csv('data/products.csv')
     except FileNotFoundError:
-        st.error("Дані не знайдено. Запустіть генератор даних!")
+        st.error("No data found. Run the data generator.!")
         return pd.DataFrame()
 
 products = load_products()
 
 if products.empty:
-    st.warning("Завантажте дані за допомогою scripts/generate_data.py")
+    st.warning("Load data using scripts/generate_data.py")
 else:
-    st.sidebar.success(f"Завантажено {len(products)} продуктів")
+    st.sidebar.success(f"Uploaded {len(products)} products")
 
 # Ініціалізація історії чату
 if "messages" not in st.session_state:
@@ -29,7 +29,7 @@ for msg in st.session_state.messages:
         st.markdown(msg["content"])
 
 # Обробка нового вводу користувача
-if prompt := st.chat_input("Запитайте про товари (наприклад, 'phone')"):
+if prompt := st.chat_input("Ask about products (e.g. 'phone')"):
     # Додаємо повідомлення користувача в історію та показуємо його
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
@@ -45,11 +45,11 @@ if prompt := st.chat_input("Запитайте про товари (наприк
 
     # Формування відповіді
     if not results.empty:
-        response = f"Знайдено {len(results)} товарів:\n\n"
+        response = f"Found {len(results)} products:\n\n"
         for _, row in results.head(5).iterrows():
             response += f"- **{row['name']}** ({row['category']}) - ${row['final_price']}\n  {row['description'][:150]}...\n\n"
     else:
-        response = "Нічого не знайдено. Спробуйте інший запит!"
+        response = "Nothing found. Try another query.!"
 
     # Додаємо відповідь асистента в історію та показуємо її
     with st.chat_message("assistant"):
