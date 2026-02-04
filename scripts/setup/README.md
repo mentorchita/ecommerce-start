@@ -1,25 +1,25 @@
-./scripts/setup/init_project.sh              # Повний setup
-./scripts/setup/init_project.sh --quick      # Швидкий режим (менше даних)
-./scripts/setup/init_project.sh --skip-build # Без білда Docker
-./scripts/setup/init_project.sh --skip-data  # Без генерації даних
-./scripts/setup/init_project.sh --help       # Допомога
+./scripts/setup/init_project.sh              # full setup
+./scripts/setup/init_project.sh --quick      # quickly 
+./scripts/setup/init_project.sh --skip-build # No Docker build
+./scripts/setup/init_project.sh --skip-data  # No data generation
+./scripts/setup/init_project.sh --help       # Help
 ```
 
-✅ **Кольоровий output:**
+✅ **Color output:**
 - 🔵 Info messages
 - 🟢 Success messages
 - 🟡 Step indicators
 - 🔴 Error messages
 
-✅ **Розумні перевірки:**
-- Чи Docker running
-- Чи Python 3.10+
-- Чи достатньо disk space (10GB+)
-- Чи достатньо RAM (8GB+)
+✅ **Smart checks:**
+- Is Docker running
+- Is Python 3.10+
+- Is there enough disk space (10GB+)
+- Is there enough RAM (8GB+)
 
 ✅ **Graceful failures:**
-- Якщо якийсь крок падає - зрозумілі повідомлення
-- Пропозиції як пофіксити
+- If a step falls - clear messages
+- Suggestions on how to fix it
 - Exit codes для automation
 
 ✅ **Progress tracking:**
@@ -37,7 +37,9 @@
 ==============================================================================
   E-commerce Agent System - Project Initialization
 ==============================================================================
+
 Course: End-to-End MLOps, LLMOps & AgenticOps
+
 Module: 01 - Foundations & Project Setup
 
 [10:30:15] [1/9] Checking prerequisites...
@@ -67,11 +69,9 @@ All services are now running!
 
 Service URLs:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  ML Service:      http://localhost:8001     (Health: /health)
-  RAG Service:     http://localhost:8002     (Health: /health)
-  Agent Service:   http://localhost:8003     (Health: /health)
-  MLflow UI:       http://localhost:5000
-  Grafana:         http://localhost:3000     (admin/admin)
+  
+  Agent Service:   http://localhost:8501     (Health: /health)
+    
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Happy Learning! 🚀
